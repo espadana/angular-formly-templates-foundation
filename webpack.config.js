@@ -60,7 +60,7 @@ var baseConfig = {
     loaders: [
       {test: /\.html$/, loader: 'raw', exclude: exclude},
       {test: /\.js$/, loader: 'ng-annotate!babel!jshint', exclude: exclude},
-      { test: /\.css$/, loader: "style-loader!css-loader" }
+      {test: /\.css$/, loader: "style-loader!css-loader" }
     ]
   }
 };
