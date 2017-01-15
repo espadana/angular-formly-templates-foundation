@@ -64,7 +64,10 @@
   "bugs": {
     "url": "https://github.com/formly-js/angular-formly-templates-foundation/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "css-loader": "^0.26.1",
+    "style-loader": "^0.13.1"
+  },
   "keywords": [],
   "license": "MIT"
 }

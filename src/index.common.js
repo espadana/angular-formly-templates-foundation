@@ -14,5 +14,6 @@ ngModule.constant('formlyFoundationVersion', VERSION);
 require('./wrappers')(ngModule);
 require('./types')(ngModule);
 require('./run')(ngModule);
+require('css!./stylesheets/style.css');
 
 export default ngModuleName;
