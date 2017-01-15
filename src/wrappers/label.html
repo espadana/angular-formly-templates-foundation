@@ -1,5 +1,10 @@
-<label for="{{id}}" class="">
-  {{to.label}}
-  {{to.required ? '*' : ''}}
-</label>
-<formly-transclude></formly-transclude>
+<div class="columns small-12" ng-class="fc.$error ? is-invalid-label : ''">
+  <label for="{{id}}" class="">
+    <span class="formly-wrapper-label">{{to.label}}</span>
+    <span class="formly-wrapper-required">{{to.required ? '*' : ''}}</span>
+    <formly-transclude></formly-transclude>
+    <div ng-messages="fc.$error" ng-if="options.formControl.$touched" class="my-messages ">
+      <div ng-message="{{::name}}" ng-repeat="(name, message) in ::options.validation.messages" class="form-error is-visible"><span style="color:red;font-size: 10px">{{message(fc.$viewValue, fc.$modelValue, this)}}</span></div>
+    </div>
+  </label>
+</div>
