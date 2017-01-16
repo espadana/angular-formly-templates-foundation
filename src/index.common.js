@@ -1,6 +1,6 @@
 const ngModuleName = 'formlyFoundation';
 const angular = require('./angular-fix');
-const ngModule = angular.module(ngModuleName, [require('angular-formly')]);
+const ngModule = angular.module(ngModuleName, [require('angular-formly') ,require('angular-messages')]);
 ngModule.constant(
   'formlyFoundationApiCheck',
   require('api-check')({

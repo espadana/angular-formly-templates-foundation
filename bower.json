@@ -30,7 +30,8 @@
     "angular": ">=1.2.x",
     "angular-formly": ">=4.0.5",
     "api-check": ">=6.0.10",
-    "foundation": ">=5.0.0"
+    "foundation": ">=5.0.0",
+    "angular-messages": "^1.6.1"
   },
   "devDependencies": {
     "chai": "~1.9.1",
