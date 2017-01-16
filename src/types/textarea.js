@@ -4,7 +4,7 @@ export default  ngModule => {
   function addTextareaType(formlyConfigProvider) {
     formlyConfigProvider.setType({
       name: 'textarea',
-      template: '<textarea class="" ng-model="model[options.key]"></textarea>',
+      template: '<textarea class="" ng-model="model[options.key]" ng-class="fc.$valid ? \'\' : \'is-invalid-input\'"></textarea>',
       wrapper: ['templateLabel', 'templateHasError'],
       defaultOptions: {
         ngModelAttrs: {

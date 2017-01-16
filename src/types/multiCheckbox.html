@@ -1,9 +1,9 @@
 <div ng-repeat="(key, option) in to.options" class="checkbox">
-  <label>
+  <label ng-class="fc.$valid ? '' : 'is-invalid-label'">
     <input type="checkbox"
            id="{{id + '_'+ $index}}"
            ng-model="multiCheckbox.checked[$index]"
-           ng-change="multiCheckbox.change()">
+           ng-change="multiCheckbox.change()" ng-class="fc.$valid ? '' : 'is-invalid-input'">
       {{option[to.labelProp || 'name']}}
   </label>
 </div>

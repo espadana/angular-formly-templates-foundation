@@ -1,9 +1,9 @@
 <div class="checkbox">
-	<label>
+	<label ng-class="fc.$valid ? '' : 'is-invalid-label'">
 		<input type="checkbox"
            class="formly-field-checkbox"
-		       ng-model="model[options.key]">
-		{{to.label}}
-		{{to.required ? '*' : ''}}
+		       ng-model="model[options.key]" ng-class="fc.$valid ? '' : 'is-invalid-input'">
+		<span>{{to.label}}</span>
+		<span>{{to.required ? '*' : ''}}</span>
 	</label>
 </div>

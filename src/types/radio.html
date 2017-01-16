@@ -1,10 +1,11 @@
-<div ng-repeat="(key, option) in to.options" class="radio">
+<div ng-repeat="(key, option) in to.options" class="radio" ng-class="fc.$valid ? '' : 'is-invalid-label'">
   <label>
     <input type="radio"
            id="{{id + '_'+ $index}}"
            tabindex="0"
            ng-value="option[to.valueProp || 'value']"
-           ng-model="model[options.key]">
+           ng-model="model[options.key]"
+           ng-class="fc.$valid ? '' : 'is-invalid-input'">
       {{option[to.labelProp || 'name']}}
   </label>
 </div>
