@@ -4,7 +4,7 @@
     <span class="formly-wrapper-required" >{{to.required ? '*' : ''}}</span>
     <formly-transclude></formly-transclude>
     <div ng-messages="fc.$error" 
-    <!--ng-if="options.formControl.$touched" -->
+    ng-if="options.formControl.$touched" 
     class="my-messages form-error is-visible">
       <div ng-message="{{::name}}" ng-repeat="(name, message) in ::options.validation.messages" class="form-error is-visible">{{message(fc.$viewValue, fc.$modelValue, this)}}</div>
     </div>
