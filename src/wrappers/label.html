@@ -1,10 +1,10 @@
 <div class="" >
-  <label for="{{id}}" ng-class="options.formControl.$invalid && options.formControl.$pristine == false ? '' : 'is-invalid-label'">
+  <label for="{{id}}" ng-class="options.formControl.$invalid && options.formControl.$pristine == false ? 'is-invalid-input' : ''">
     <span class="formly-wrapper-label">{{to.label}}</span>
     <span class="formly-wrapper-required" >{{to.required ? '*' : ''}}</span>
     <formly-transclude></formly-transclude>
     <div ng-messages="fc.$error" 
-    ng-if="options.formControl.$invalid && options.formControl.$pristine == false" 
+    ng-if="options.formControl.$toched" 
     class="my-messages form-error is-visible">
       <div ng-message="{{::name}}" ng-repeat="(name, message) in ::options.validation.messages" class="form-error is-visible">{{message(fc.$viewValue, fc.$modelValue, this)}}</div>
     </div>

@@ -2,7 +2,7 @@
 	<label ng-class="fc.$valid ? '' : 'is-invalid-label'">
 		<input type="checkbox"
            class="formly-field-checkbox"
-		       ng-model="model[options.key]" ng-class="options.formControl.$invalid && options.formControl.$pristine == false ? '' : 'is-invalid-input'">
+		       ng-model="model[options.key]" ng-class="options.formControl.$invalid && options.formControl.$pristine == false ? 'is-invalid-input' : ''">
 		<span>{{to.label}}</span>
 		<span>{{to.required ? '*' : ''}}</span>
 	</label>
