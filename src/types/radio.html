@@ -5,7 +5,7 @@
            tabindex="0"
            ng-value="option[to.valueProp || 'value']"
            ng-model="model[options.key]"
-           ng-class="fc.$valid ? '' : 'is-invalid-input'">
+           ng-class="options.formControl.$invalid && options.formControl.$pristin == false ? '' : 'is-invalid-input'">
       {{option[to.labelProp || 'name']}}
   </label>
 </div>
