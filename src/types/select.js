@@ -5,7 +5,7 @@ export default  ngModule => {
     formlyConfigProvider.setType({
       name: 'select',
       template: require('./select.html'),
-      wrapper: ['templateLabel', 'templateHasError'],
+      wrapper: ['foundationLabel', 'foundationHasError'],
       apiCheck: check => ({
         templateOptions: {
           options: check.arrayOf(check.object),
