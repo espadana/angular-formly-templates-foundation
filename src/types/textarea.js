@@ -6,7 +6,7 @@ export default  ngModule => {
       name: 'textarea',
       template: '<textarea class="" ng-model="model[options.key]"' + 
       ' ng-class="options.formControl.$invalid && options.formControl.$pristine == false ? \'is-invalid-input\' : \'\'"></textarea>',
-      wrapper: ['templateLabel', 'templateHasError'],
+      wrapper: ['foundationLabel', 'foundationHasError'],
       defaultOptions: {
         ngModelAttrs: {
           rows: {attribute: 'rows'},
