@@ -6,14 +6,7 @@ export default ngModule => {
     formlyConfigProvider.setWrapper([
       {
         name: 'templateLabel',
-        template: require('./label.html'),
-        apiCheck: {
-	        templateOptions: {
-	          label: c.string,
-	          required: c.bool.optional
-	        }
-	      },
-	      apiCheckInstance: c
+        template: require('./label.html')
       },
       {name: 'templateHasError', template: require('./has-error.html')}
     ]);
