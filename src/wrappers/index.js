@@ -1,14 +1,19 @@
 export default ngModule => {
   ngModule.config(addWrappers);
 
-  function addWrappers(formlyConfigProvider,formlyFoundationApiCheck) {
-    var c = formlyFoundationApiCheck;
+  function addWrappers(formlyConfigProvider) {
     formlyConfigProvider.setWrapper([
       {
-        name: 'templateLabel',
-        template: require('./label.html')
+        name: 'foundationLabel',
+        template: require('./label.html'),
+        apiCheck: check => ({
+          templateOptions: {
+            label: check.string.optional,
+            required: check.bool.optional
+          }
+        })
       },
-      {name: 'templateHasError', template: require('./has-error.html')}
+      {name: 'foundationHasError', template: require('./has-error.html')}
     ]);
   }
 };
