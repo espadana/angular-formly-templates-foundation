@@ -8,10 +8,10 @@ export default ngModule => {
         name: 'templateLabel',
         template: require('./label.html'),
         apiCheck: {
-	        templateOptions: c.shape({
+	        templateOptions: {
 	          label: c.string,
 	          required: c.bool.optional
-	        })
+	        }
 	      },
 	      apiCheckInstance: c
       },
