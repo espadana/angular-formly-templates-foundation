@@ -4,7 +4,9 @@ export default ngModule => {
   function addInputType(formlyConfigProvider) {
     formlyConfigProvider.setType({
       name: 'input',
-      template: '<input ng-model="model[options.key]" ng-class="options.formControl.$invalid && options.formControl.$pristine == false ? \'is-invalid-input\' : \'\'">',
+      template: '<input ng-model="model[options.key]" ' +
+      ' ng-class="options.formControl.$invalid && options.formControl.$pristine == false ' +
+      ' ? \'is-invalid-input\' : \'\'">',
       wrapper: ['foundationLabel', 'foundationHasError'],
       defaultOptions: {
         templateOptions: { type: 'text' }
