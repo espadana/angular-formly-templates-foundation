@@ -5,7 +5,7 @@ export default ngModule => {
     formlyConfigProvider.setType({
       name: 'radio',
       template: require('./radio.html'),
-      wrapper: ['templateLabel', 'templateHasError'],
+      wrapper: ['foundationLabel', 'foundationHasError'],
       defaultOptions: {
         noFormControl: false
       },
