@@ -1,6 +1,11 @@
 <div class="" >
   <label for="{{id}}" ng-class="options.formControl.$invalid && options.formControl.$pristine == false ? 'is-invalid-label' : ''">
-    <span class="formly-wrapper-label">{{to.label}}</span>
+    <span ng-if="to.trandlate">
+      <span class="formly-wrapper-label" translate="{{to.translate}}"></span>
+    </span>
+    <span ng-if="!to.trandlate">
+      <span class="formly-wrapper-label">{{to.label}}</span>
+    </span>
     <span class="formly-wrapper-required" >{{to.required ? '*' : ''}}</span>
     <formly-transclude></formly-transclude>
     <div ng-messages="fc.$error" 
