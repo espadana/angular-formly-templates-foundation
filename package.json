@@ -65,7 +65,7 @@
     "url": "https://github.com/formly-js/angular-formly-templates-foundation/issues"
   },
   "dependencies": {
-    "angular-messages": "^1.6.1",
+    "angular-messages": "1.5.11",
     "css-loader": "^0.26.1",
     "style-loader": "^0.13.1"
   },
